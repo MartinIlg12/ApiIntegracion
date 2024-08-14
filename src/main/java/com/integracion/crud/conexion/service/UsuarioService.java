@@ -26,7 +26,7 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public void save(Usuario usuario) {
+    public void saveOrUpdate(Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 

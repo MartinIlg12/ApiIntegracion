@@ -26,7 +26,7 @@ public class MaestroService {
         return maestroRepository.findById(id);
     }
 
-    public void save(Maestro maestro) {
+    public void saveOrUpdate(Maestro maestro) {
         maestroRepository.save(maestro);
     }
 

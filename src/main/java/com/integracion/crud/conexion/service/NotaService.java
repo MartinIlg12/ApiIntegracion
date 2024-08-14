@@ -26,7 +26,7 @@ public class NotaService {
         return notaRepository.findById(id);
     }
 
-    public void save(Nota nota) {
+    public void saveOrUpdate(Nota nota) {
         notaRepository.save(nota);
     }
 
