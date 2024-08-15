@@ -34,7 +34,9 @@ public class UsuarioService {
         usuarioRepository.deleteById(id);
     }
     public Usuario authenticate(String username, String password) {
-        return usuarioRepository.findByUsernameAndPassword(username, password)
+        return usuarioRepository.findByUsernameAndPassword(username, password
+
+                )
                 .orElse(null);
     }
 }
