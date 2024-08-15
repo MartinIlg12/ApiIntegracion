@@ -13,11 +13,7 @@ public class Maestro {
 
     private String nombre;
     private String materia;
-
-    @Column(name = "usuario_id", insertable = false, updatable = false)
-    private Long usuarioId;
-
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
     private Usuario usuario;
 }
