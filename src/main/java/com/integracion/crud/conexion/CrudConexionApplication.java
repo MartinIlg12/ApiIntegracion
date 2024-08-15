@@ -16,7 +16,7 @@ public class CrudConexionApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200","http://localhost:3000" ).allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("http://192.168.4.112:4200","http://192.168.4.112:3000" ).allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
