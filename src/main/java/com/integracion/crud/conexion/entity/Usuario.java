@@ -16,14 +16,9 @@ public class Usuario {
 
     private String password;
 
-    @Enumerated(EnumType.STRING)
+
     private TipoUsuario tipo;
 
-    @OneToOne(mappedBy = "usuario")
-    private Estudiante estudiante;
-
-    @OneToOne(mappedBy = "usuario")
-    private Maestro maestro;
 
     public enum TipoUsuario {
         MAESTRO, ESTUDIANTE
