@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
+                branches: [[name: '*/main']],
                 git 'https://github.com/MartinIlg12/ApiIntegracion.git'
             }
         }
