@@ -19,24 +19,12 @@ pipeline {
             }
         }
 
-        stage('Verificar contenido de target') {
-            steps {
-                bat 'dir target'
-            }
-        }
-
-        stage('Desplegar en servidor') {
-            steps {
-                bat '''
-                IF EXIST C:\\Servidor\\Spring\\app.jar del /f /q C:\\Servidor\\Spring\\app.jar
-                copy target\\*.jar C:\\Servidor\\Spring\\app.jar
-                '''
-            }
-        }
-
         stage('Ejecutar aplicación') {
             steps {
-                bat 'java -jar C:\\Servidor\\Spring\\app.jar'
+                bat '''
+                cd target
+                java -jar crud-conexion-0.0.1-SNAPSHOT.jar
+                '''
             }
         }
     }
