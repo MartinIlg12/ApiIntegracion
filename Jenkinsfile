@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        MAVEN_HOME = 'C:\\Maven\\apache-maven-3.9.8'
+        PATH = "${MAVEN_HOME}\\bin;${env.PATH}"
+    }
+
     stages {
         stage('Clonar repositorio') {
             steps {
-                
                 git 'https://github.com/MartinIlg12/ApiIntegracion.git'
             }
         }
