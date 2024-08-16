@@ -19,6 +19,12 @@ pipeline {
             }
         }
 
+        stage('Verificar contenido de target') {
+            steps {
+                bat 'dir target'
+            }
+        }
+
         stage('Desplegar en servidor') {
             steps {
                 bat '''
